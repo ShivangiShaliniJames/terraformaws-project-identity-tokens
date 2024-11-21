@@ -1,9 +1,17 @@
 variable "aws_region" {
-  description = "AWS region to deploy resources"
-  default     = "us-east-1"
+  type    = string
+  default = "us-east-1"
 }
 
-variable "role_arn" {
-  description = "AWS IAM Role ARN for OIDC trust"
-  type        = string
+variable "tfc_organization" {
+  type = string
+}
+
+variable "tfc_project" {
+  type = string
+}
+
+variable "tfc_hostname" {
+  type    = string
+  default = "app.terraform.io"
 }
